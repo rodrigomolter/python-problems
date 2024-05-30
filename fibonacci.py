@@ -1,3 +1,5 @@
+from typing import Iterator
+
 def main():
   
   print("Classic Fibonacci resolution: ")
@@ -11,7 +13,7 @@ def main():
 
 
 """ Classic Fibonacci resolution """
-def fibonacci(n):
+def fibonacci(n: int) -> list:
   fib = [1, 1]
   for i in range(2, n):
     fib.append(fib[i-2] + fib[i-1])  
@@ -19,20 +21,20 @@ def fibonacci(n):
 
 
 """ Recursive Fibonnaci resolution """
-def fibonacci2(n):
+def fibonacci2(n: int) -> list:
   fib = []
   for i in range(1, n+1):
     fib.append(fibonacci_recursive(i))
   return fib
 
-def fibonacci_recursive(n):
+def fibonacci_recursive(n: int) -> int:
   if n > 1:
     return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
   return n
 
 
 """ Pythonic Fibonacci resolution """
-def fibonacci3(n): 
+def fibonacci3(n: int) -> Iterator[int]:
   a, b = 1, 1
   for _ in range(n):
     yield a

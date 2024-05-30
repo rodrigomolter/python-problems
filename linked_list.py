@@ -1,5 +1,3 @@
-import sys
-
 class Node():
   def __init__(self, value, parent = None):
     self.value = value
@@ -16,7 +14,6 @@ def main():
    node = Node(i, node)
 
   print(node)
-
 
 if __name__ == "__main__":
   main()

@@ -1,15 +1,16 @@
 from typing import Iterator
 
 def main():
-  
+  SIZE = 10
+
   print("Classic Fibonacci resolution: ")
-  print(*fibonacci(10))
+  print(*fibonacci(SIZE))
 
   print("\nRecursive Fibonnaci resolution: ")
-  print(*fibonacci2(10))
+  print(*fibonacci2(SIZE))
 
   print("\nPythonic Fibonacci resolution: ")
-  print(*fibonacci3(10))
+  print(*fibonacci3(SIZE))
 
 
 """ Classic Fibonacci resolution """
